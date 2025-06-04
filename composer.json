@@ -22,7 +22,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "8.0.99"
+            "php": "8.4.99"
         },
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
@@ -35,9 +35,9 @@
         }
     },
     "require": {
-        "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "ext-json": "*",
-        "laminas-api-tools/api-tools-api-problem": "^1.6.0",
+        "laminas-api-tools/api-tools-api-problem": "^1.7.0",
         "laminas/laminas-eventmanager": "^3.0.1",
         "laminas/laminas-filter": "^2.7.1",
         "laminas/laminas-http": "^2.5.4",
@@ -83,5 +83,14 @@
     },
     "replace": {
         "zfcampus/zf-hal": "^1.6.0"
-    }
+    },
+    "provide": {
+        "laminas-api-tools/api-tools-api-problem": "1.7.x-dev"
+    },
+    "repositories": [
+        {
+          "type": "git",
+          "url": "https://github.com/viovendi/api-tools-api-problem"
+        }
+    ]
 }
