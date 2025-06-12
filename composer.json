@@ -84,9 +84,6 @@
     "replace": {
         "zfcampus/zf-hal": "^1.6.0"
     },
-    "provide": {
-        "laminas-api-tools/api-tools-api-problem": "1.7.x-dev"
-    },
     "repositories": [
         {
           "type": "git",
