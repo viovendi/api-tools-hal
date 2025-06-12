@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30f1cfbaca9a2510ba2fa405e682164b",
+    "content-hash": "37f7284bf651c0aac7b7ecd63962bfb2",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -54,6 +54,94 @@
                 }
             ],
             "time": "2023-09-01T21:10:07+00:00"
+        },
+        {
+            "name": "laminas-api-tools/api-tools-api-problem",
+            "version": "1.7.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/viovendi/api-tools-api-problem",
+                "reference": "aa0beaef986f8b2cdc6b97b5a99e8e503ebbee4a"
+            },
+            "require": {
+                "ext-json": "*",
+                "laminas/laminas-eventmanager": "^2.6.3 || ^3.0.1",
+                "laminas/laminas-http": "^2.15.1",
+                "laminas/laminas-json": "^2.6.1 || ^3.0",
+                "laminas/laminas-mvc": "^2.7.15 || ^3.0.4",
+                "laminas/laminas-view": "^2.8.1",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+            },
+            "replace": {
+                "zfcampus/zf-api-problem": "^1.3.0"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~2.3.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.5.27",
+                "psalm/plugin-phpunit": "^0.16.1",
+                "vimeo/psalm": "^4.30"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "module": "Laminas\\ApiTools\\ApiProblem"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\ApiTools\\ApiProblem\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "LaminasTest\\ApiTools\\ApiProblem\\": "test/"
+                }
+            },
+            "scripts": {
+                "check": [
+                    "@cs-check",
+                    "@test"
+                ],
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test": [
+                    "phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "phpunit --colors=always --coverage-clover clover.xml"
+                ],
+                "static-analysis": [
+                    "psalm --shepherd --stats"
+                ]
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Laminas Module providing API-Problem assets and rendering",
+            "homepage": "https://api-tools.getlaminas.org",
+            "keywords": [
+                "api-problem",
+                "api-tools",
+                "laminas",
+                "module",
+                "rest"
+            ],
+            "support": {
+                "docs": "https://api-tools.getlaminas.org/documentation",
+                "issues": "https://github.com/laminas-api-tools/api-tools-api-problem/issues",
+                "source": "https://github.com/laminas-api-tools/api-tools-api-problem",
+                "rss": "https://github.com/laminas-api-tools/api-tools-api-problem/releases.atom",
+                "chat": "https://laminas.dev/chat",
+                "forum": "https://discourse.laminas.dev"
+            },
+            "time": "2025-06-04T13:08:58+00:00"
         },
         {
             "name": "laminas/laminas-config",
@@ -1104,16 +1192,16 @@
         },
         {
             "name": "laminas/laminas-validator",
-            "version": "2.64.2",
+            "version": "2.64.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-validator.git",
-                "reference": "771e504760448ac7af660710237ceb93be602e08"
+                "reference": "b3ec5865e7aa60a0fbce211500f4a5c6a6e11a30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/771e504760448ac7af660710237ceb93be602e08",
-                "reference": "771e504760448ac7af660710237ceb93be602e08",
+                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/b3ec5865e7aa60a0fbce211500f4a5c6a6e11a30",
+                "reference": "b3ec5865e7aa60a0fbce211500f4a5c6a6e11a30",
                 "shasum": ""
             },
             "require": {
@@ -1184,7 +1272,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-11-26T21:29:17+00:00"
+            "time": "2025-06-11T10:23:09+00:00"
         },
         {
             "name": "laminas/laminas-view",
@@ -5800,7 +5888,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "laminas-api-tools/api-tools-api-problem": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
